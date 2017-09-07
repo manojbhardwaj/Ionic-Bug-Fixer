@@ -1,0 +1,14 @@
+
+if (this.platform.is('ios')) {
+        this.storageDirectory = this.file.documentsDirectory;
+      }
+      if(this.platform.is('android')) {
+        this.storageDirectory = this.file.dataDirectory;
+      }
+      console.info(this.storageDirectory);
+      this.file.moveDir(this.myvediostorageDirectory,'Android/data/vedio/',this.file.dataDirectory,'vedio').then(() => {
+        console.info('your files is moved')
+          })
+          .catch((err) => {
+            console.info(err,'file not exit')
+        })
