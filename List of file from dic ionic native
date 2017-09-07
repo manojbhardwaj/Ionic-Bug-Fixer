@@ -1,0 +1,6 @@
+   this.file.listDir(this.file.dataDirectory,'vedio').then
+        (_res => 
+          _res.forEach(function(value) {
+            console.info(value)
+          })
+        )
